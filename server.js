@@ -36,3 +36,110 @@ db.connect(err=> {
 
 //Show :: On what port number having this application
 app.listen(port, ()=> {console.log('Server port established on 3000')})
+
+
+//Define API 
+
+//to insert product into db
+//       endpoints 
+app.post('/addProduct',(req,res)=>{
+
+    //Pass the data in the form of json
+    const{id,name,orderdate,ordertime} = req.body;
+
+    //Write sql query
+    const sql = 'insert into product values(?,?,?,?)';
+
+    //Connect the db and Access the query method
+    db.query(sql,[id,name,orderdate,ordertime],(err,result)=>{
+
+        if(err){
+            console.error('Error in Adding the Product',err);
+            res.status(500).json({error:'An error occured'});
+        }else{
+            res.status(200).json({message:'Product Added Successfully'});
+        }
+        
+    });
+
+});
+
+//to get all the products--To view list
+ 
+app.get('/getProducts',(req,res)=>{
+    //Because it is a get operation , there is no data supply here.
+    //write sql query
+    const sql = 'select * from product';
+
+    //connect db and call the query method
+    db.query(sql,(err,result)=>{
+        if(err){
+            console.error('Error in fetching the product',err);
+            res.status(500).json({error:'An error occured'});
+        }else{
+            res.status(200).json(result); //No message here like, result object is passed directly 
+        }
+    });
+
+});
+
+//to get product on Id
+app.get('/getProducts/:id',(req,res)=>{
+
+    const id = req.params.id;
+    //Define query,No datasupply here as it is a get operation
+    const sql = 'select * from product where id=?';
+
+    //connect db and access query method
+    db.query(sql,[id],(err,result)=>{
+        if(err){
+            console.error('Error in fetching the product by id',err);
+            res.status(500).json({error:'An error occured'});
+        }else{
+            res.status(200).json(result);
+        }
+    });
+
+});
+
+
+
+//update of product
+app.put('/updateProduct',(req,res)=>{
+
+    //Pass the data in the form of jshon
+    const {id, name, orderdate,ordertime}=req.body;
+
+    //Write sql query
+    const sql ='update product set name=? , orderdate=? , ordertime=? where id=? ';
+   
+    //Connect db and access the query method
+    db.query(sql,[name,orderdate,ordertime,id],(err,result)=>{
+        if(err){
+            console.error('Error in Updating Product Values',err);
+            res.status(500).json({error: 'An error occured'});
+        }else{
+            res.status(200).json({message: 'Product Updated Succesfully'})
+        }
+    });
+
+});
+
+//delete of product
+app.delete('/deleteProduct/:id',(req,res)=>{
+    //define id
+    const id = req.params.id;
+    //define sql query
+    const sql = 'delete from product where id=? ';
+
+    //connect db and access query
+    db.query(sql,[id],(err,result)=>{
+       if(err){
+        console.error('Error in deleting product',err);
+        res.status(500).json({error:'An error ocurred'});
+       }else{
+        res.status(200).json({message:'Product Deleted Successfully'});
+       }
+    });
+
+});
