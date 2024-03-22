@@ -1,1 +1,24 @@
-<p>view-product works!</p>
+<h3>{{message}}</h3>
+
+<h1>View Ordered Products </h1>
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Order Date</th>
+        <th>Order Time</th>
+        <th>Edit Action</th>
+        <th>Delete Action</th>
+    </tr>
+
+    <tr *ngFor="let product of products">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.orderdate | date:'dd/MM/yy'}}</td> <!--Using piping in date-->
+        <td>{{product.ordertime}}</td>
+        <td><button routerLink="/edit/{{product.id}}">Edit</button></td>  <!--Edit: You need to go to separate page -->
+        <td><button (click)="deleteProduct(product.id)">Delete</button></td> <!--Delete : It is an action. -->
+
+    </tr>
+</table>
