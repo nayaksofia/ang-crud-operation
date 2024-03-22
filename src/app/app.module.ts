@@ -16,7 +16,7 @@ const routes:Routes=[
 {path:'',redirectTo:'/view',pathMatch:'full'},
 {path:'view', component:ViewProductComponent},
 {path:'add',component:AddProductComponent},
-{path:'edit',component:EditProductComponent}
+{path:'edit/:id',component:EditProductComponent}
 ]
 
 @NgModule({

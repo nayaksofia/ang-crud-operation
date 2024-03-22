@@ -24,7 +24,7 @@ you write that piece of code inside ngOnInit().
   }
   
   fetchProducts(){
-    this.http.get('http://localhost:3000/getProducts/')
+    this.http.get('http://localhost:3000/getProducts')
     .subscribe((response:any)=>
     {this.products=response},
     (error)=> {console.error('Error fetching the product',error);}
