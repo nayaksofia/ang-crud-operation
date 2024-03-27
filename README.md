@@ -25,3 +25,28 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Output Of My Project: 
+
+### View Product:
+![View Product](..\angcrudsofi\img\view-product.png)
+
+### Add Product:
+![View Product](..\angcrudsofi\img\add-product.png)
+
+![View Product](..\angcrudsofi\img\after-adding.png)
+
+![View Product](..\angcrudsofi\img\view-list-products.png)
+
+### Edit Product
+![View Product](..\angcrudsofi\img\view-product.png)
+
+![View Product](..\angcrudsofi\img\edit-product.png)
+
+![View Product](..\angcrudsofi\img\edited-product.png)
+
+### Delete Product
+![View Product](..\angcrudsofi\img\delete-product.png)
+
+
+![View Product](..\angcrudsofi\img\after-deletion.png)
