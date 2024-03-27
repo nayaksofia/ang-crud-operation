@@ -30,25 +30,25 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Output Of My Project: 
 
 ### View Product:
-![View Product](img\view-product.png)
+![View Product](img/view-product.png)
 
 ### Add Product:
-![Add Product1](img\add-product.png)
+![Add Product1](img/add-product.png)
 
-![Add Product2](img\after-adding.png)
+![Add Product2](img/after-adding.png)
 
-![Add Product3](img\view-list-products.png)
+![Add Product3](img/view-list-products.png)
 
 ### Edit Product
-![Edit Product1](img\view-product.png)
+![Edit Product1](img/view-product.png)
 
-![Edit Product2](img\edit-product.png)
+![Edit Product2](img/edit-product.png)
 
-![Edit Product3](img\edited-product.png)
+![Edit Product3](img/edited-product.png)
 
 ### Delete Product
-![Delete Product1](img\delete-product.png)
+![Delete Product1](img/delete-product.png)
 
 
-![Delete Product](img\after-deletion.png)
+![Delete Product](img/after-deletion.png)
 
