@@ -27,6 +27,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+## Important To Remember
+### To connect the server 
+- first open `mySql workbench` 
+- Then go to the path of created `server.js` where it present
+- Write `cmd`
+- It will open command prompt
+- Write `node server.js` there.
+- It will connect the `MySQL` database successfully
+
+
 ## Output Of My Project: 
 
 ### View Product: 
