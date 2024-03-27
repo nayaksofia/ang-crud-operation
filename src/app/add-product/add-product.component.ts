@@ -13,7 +13,7 @@ export class AddProductComponent implements OnInit {
   name:string='';
   orderdate:string='';
   ordertime:string='';
-  message:string=''
+  message:string='';
 
   //Create object to httpclient
   constructor(private http:HttpClient){}

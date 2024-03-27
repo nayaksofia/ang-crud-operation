@@ -1,25 +1,28 @@
-<h4> {{message}} </h4>
-
-<h1> Add Product </h1>
-
-<div>
-    <label>ID: </label>
-    <input type="number" [(ngModel)]="id"/>
-</div>
-
-<div>
-    <label>Name </label>
-    <input type="text" [(ngModel)]="name"/>
-</div>
-
-<div>
-    <label>Order Date</label>
-    <input type="date" [(ngModel)]="orderdate"/>
-</div>
-
-<div>
-    <label>Order Time</label>
-    <input type="time" [(ngModel)]="ordertime"/>
-</div>
-
-<button (click)="addProduct()">Add Product</button>
+<div class="container mt-3">
+    <h4>{{message}}</h4>
+  
+    <h1>Add Product</h1>
+  
+    <div class="form-group">
+      <label for="id">ID:</label>
+      <input id="id" type="number" class="form-control" [(ngModel)]="id"/>
+    </div>
+  
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input id="name" type="text" class="form-control" [(ngModel)]="name"/>
+    </div>
+  
+    <div class="form-group">
+      <label for="orderDate">Order Date:</label>
+      <input id="orderDate" type="date" class="form-control" [(ngModel)]="orderdate"/>
+    </div>
+  
+    <div class="form-group">
+      <label for="orderTime">Order Time:</label>
+      <input id="orderTime" type="time" class="form-control" [(ngModel)]="ordertime"/>
+    </div>
+  
+    <button class="btn btn-primary" (click)="addProduct()">Add Product</button>
+  </div>
+  
