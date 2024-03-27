@@ -1,5 +1,6 @@
-# Angcrudsofi
 
+
+# Angcrudsofi
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.6.
 
 ## Development server
@@ -50,3 +51,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ![View Product](..\angcrudsofi\img\after-deletion.png)
+
