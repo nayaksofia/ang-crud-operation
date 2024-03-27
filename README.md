@@ -29,7 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Output Of My Project: 
 
-### View Product:
+### View Product: 
+[Click to view product](http://localhost:4200/view) 
 ![View Product](img/view-product.png)
 
 ### Add Product:
